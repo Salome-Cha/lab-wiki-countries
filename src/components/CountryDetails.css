@@ -1,0 +1,18 @@
+#country-details {
+  width: 500px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.details {
+  width: 800px;
+}
+
+.label {
+  width: 150px;
+}
+.content {
+  width: 500px;
+}

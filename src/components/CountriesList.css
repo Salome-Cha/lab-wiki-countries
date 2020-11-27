@@ -1,0 +1,29 @@
+.countries-column {
+  max-height: 80vh;
+  overflow: scroll;
+  margin-top: 30px;
+  width: 150px;
+}
+
+.each-country {
+  list-style: none;
+  text-align: left;
+  padding: 10px;
+  border: 0.5px solid rgb(206, 200, 200);
+}
+
+.country-navlink {
+  color: black;
+  font: 12px;
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.country-navlink:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ul-countries {
+  padding-left: 0;
+}
