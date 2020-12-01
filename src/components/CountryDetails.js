@@ -13,6 +13,17 @@ class CountryDetails extends React.Component {
     }
 
     componentDidMount() {
+        this.getCountryDetail();
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps !== this.props) {
+            // This means that the url changed
+            this.getCountryDetail();
+        }
+    }
+
+    getCountryDetail = () => {
         let countryId = this.props.match.params.cca3;  
         
         console.log("cca3 coming from the url", countryId);
@@ -22,12 +33,11 @@ class CountryDetails extends React.Component {
 
         this.setState({
             name: foundCountry.name.common,
-            capital: foundCountry.capital,
+            capital: foundCountry.capital[0],
             area: foundCountry.area,
             borders: foundCountry.borders
         })
     }
-
 
     render() {
         return (
@@ -45,7 +55,7 @@ class CountryDetails extends React.Component {
                     <hr/>
                     <tr>
                         <td className="label"> Area </td>
-                        <td  className="content"><p> {this.state.area}</p> </td>
+                        <td  className="content"><p> {this.state.area} km<sup>2</sup></p> </td>
                     </tr>
                     <hr/>
                     <tr className="label">
